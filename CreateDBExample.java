@@ -8,9 +8,8 @@ public class CreateDBExample {
 	static final String PASS = "mySQLpass";
 
 	public static void main(String[] args) {
-		Connection conn = null;
-		Statement stmt = null;
-try(Connection con = Drivermanager.getConnection(DB_URL,USER, PASS);
+	
+try (Connection con = Drivermanager.getConnection(DB_URL,USER, PASS);
 		Statement stmt=con.createStatement();){
 			
 		System.outprintln("Database connection: Successful");
